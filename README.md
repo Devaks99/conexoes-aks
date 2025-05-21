@@ -70,7 +70,7 @@ Ao abrir o arquivo `index.html` em seu navegador, você verá:
 │   ├── script.js
 │   └── SkillModal.js
 ├── imgs
-│   ├── Logo.png
+│   ├── Logo-hub.png
 │   ├── ana2.jpeg
 │   └── SkillMap-Ana-Karla.png
 ├── pdfs
@@ -125,7 +125,7 @@ Este projeto está sob a licença [MIT](LICENSE), permitindo que você use, copi
 
 ---
 
-## 👨🏽‍💻 Autora
+## 👨🏽‍💻 Autor
 | <img src="imgs/ana2.jpeg" width="220" alt="Foto de Perfil"> |
 |---|
 | **[Ana Karla](https://linktr.ee/devaks)** |
