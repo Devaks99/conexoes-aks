@@ -6,6 +6,7 @@ Bem-vindo(a)! Este repositório contém um projeto simples e elegante para criar
 
 ## 📑 Índice
 - [Visão Geral](#visão-geral)
+- [Screenshots](#Screenshots)
 - [Demonstração](#demonstração)
 - [Recursos Principais](#recursos-principais)
 - [Estrutura de Pastas](#estrutura-de-pastas)
@@ -25,6 +26,16 @@ Este projeto foi criado para servir como uma **landing page** pessoal onde você
 - Exibir um _Skill Map_ (mapa de competências) para direcionar as pessoas aos seus principais projetos, repositórios ou portfólio.
 
 A página é **leve**, utiliza poucas dependências externas e foi desenvolvida para ser **fácil de customizar**.
+
+---
+
+## 📸 Screenshots
+
+![tela 1 hub conexoes aks](https://github.com/user-attachments/assets/34397862-6b86-4e32-a7d2-6eb0a911d2d4)
+![tela2 hub conexoes-aks](https://github.com/user-attachments/assets/8d204c23-1b5d-4f82-a5eb-91f9b071dfc3)
+
+![tela1 mobile hub conexoes-aks](https://github.com/user-attachments/assets/138878b0-c50f-4a7b-82aa-8c703a1901ae)
+![tela2 mobile hub conexoes-aks](https://github.com/user-attachments/assets/f192f1d6-53c1-4d90-a40b-8310bfdfddcb)
 
 ---
 
