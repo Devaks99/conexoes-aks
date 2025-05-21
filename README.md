@@ -125,7 +125,7 @@ Este projeto está sob a licença [MIT](LICENSE), permitindo que você use, copi
 
 ---
 
-## 👨🏽‍💻 Autor
+## 👨🏽‍💻 Autora
 | <img src="imgs/ana2.jpeg" width="220" alt="Foto de Perfil"> |
 |---|
 | **[Ana Karla](https://linktr.ee/devaks)** |
