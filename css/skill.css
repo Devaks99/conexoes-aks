@@ -1,0 +1,218 @@
+/* ===================== VARIÁVEIS ===================== */
+:root {
+    --bg-default-rgb: 28, 31, 38;
+    --primary-text-rgb: 45, 52, 54;
+    --modal-bg: rgba(0, 0, 0, 0.98);
+    --gradient-primary:  linear-gradient(135deg, #5e35b1, #7b1f94);
+    --gradient-accent: linear-gradient(90deg, transparent 0%, rgba(100,108,255,0.6) 50%, transparent 100%);
+  }
+  
+  .dark-mode {
+    --bg-default-rgb: 18, 18, 18;
+    --primary-text-rgb: 241, 241, 241;
+  }
+  
+  /* ===================== ANIMAÇÕES ===================== */
+  @keyframes modalEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes modalExit {
+    to {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(150%); }
+  }
+  
+  /* ===================== MODAL PRINCIPAL ===================== */
+  .skill-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-bg);
+    z-index: 9999;
+    overflow: auto;
+  }
+  
+  .skill-modal.active {
+    display: block;
+    animation: modalEntrance 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .skill-modal.closing {
+    animation: modalExit 0.3s ease-out forwards;
+  }
+  
+  /* ===================== CONTEÚDO DO MODAL ===================== */
+  .skill-modal-content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .image-container {
+    text-align: center;
+    max-width: 90vw;
+  }
+  
+  /* ===================== IMAGEM PRINCIPAL ===================== */
+  #skillMapImage {
+    max-width: 80%;
+    max-height: 70vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  #skillMapImage.zoomed {
+    transform: scale(1.8);
+    cursor: zoom-out;
+  }
+  
+  /* ===================== CONTROLES DO MODAL ===================== */
+  .close-modal {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .close-modal:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
+  
+  /* ===================== SEÇÃO DE DOWNLOAD ===================== */
+  .modal-actions {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  
+  .modal-actions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: var(--gradient-accent);
+  }
+  
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 4rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 25%, 
+      rgba(255,255,255,0.2) 50%, 
+      transparent 75%
+    );
+    animation: shine 4s infinite;
+  }
+  
+  .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(100,108,255,0.35);
+  }
+  
+  .download-btn i {
+    transition: transform 0.3s ease;
+  }
+  
+  .download-btn:hover i {
+    transform: translateY(-2px);
+  }
+  
+  /* ===================== TEXTO INFORMATIVO ===================== */
+  .download-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .download-text {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    font-weight: 300;
+  }
+  
+  /* ===================== RESPONSIVIDADE ===================== */
+  @media (max-width: 768px) {
+    .skill-modal-content {
+      padding: 1.5rem;
+    }
+  
+    #skillMapImage {
+      max-width: 95%;
+      max-height: 60vh;
+    }
+  
+    .close-modal {
+      top: 1.5rem;
+      right: 1.2rem;
+      font-size: 2.5rem;
+    }
+  
+    .download-text {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+  
+    .download-btn {
+      padding: 0.8rem 3rem;
+    }
+  }

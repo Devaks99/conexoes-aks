@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="Ana Karla, links sociais, contato profissional, portfólio pessoal, redes oficiais, perfil LinkedIn, projetos GitHub, Instagram criativo">
+  <meta name="description"
+    content="Hub pessoal de Ana Karla | Acesso rápido ao meu LinkedIn profissional, projetos no GitHub, portfólio no Instagram e todos os meus links relevantes para conexão direta.">
+  <meta name="author" content="Ana Karla">
+  <meta name="theme-color" content="#1c1f26">
+  <link rel="icon" href="imgs/Logo.png">
+  <title>Hub de Conexões | Ana Karla</title>
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Particles.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="css/skill.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Partículas: já carregadas, mas com opacidade 0.3 (mais fraco) -->
+    <div id="particles-js"></div>
+
+    <div class="header-content">
+      <!-- Título (será animado via JS) -->
+      <h1 class="typed-title" id="typedTitle"></h1>
+
+      <!-- Foto de Perfil -->
+      <img src="imgs/ana2.jpeg" alt="Foto de Perfil" class="profile-pic" id="profilePic">
+    </div>
+  </header>
+
+  <!-- Seção de introdução -->
+  <section class="intro-section">
+    <p>👋 Conecte-se comigo nas principais plataformas digitais e conheça meus projetos e redes sociais.</p>
+
+    <!-- Botão de Toggle de Tema -->
+    <button class="theme-toggle" id="themeToggle">
+    Tema <i class="fas fa-moon" id="themeToggleIcon"></i>
+    </button>
+  </section>
+
+  <!-- Container de Cards -->
+  <div class="cards-container">
+
+    <!-- Card: Linkedin Profissional -->
+    <a href="https://www.linkedin.com/in/anakarla-inojoza/" class="social-card linkedin" target="_blank"
+      style="animation-delay: 0.2s;">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn Profissional</span>
+    </a>
+
+    <!-- Card: Github Code Hub -->
+    <a href="https://github.com/Devaks99" class="social-card github" target="_blank" style="animation-delay: 0.35s;">
+      <i class="fab fa-github"></i>
+      <span>GitHub Code Hub</span>
+    </a>
+
+    <!-- Card: Instagram {Dev} -->
+    <a href="https://www.instagram.com/aks_dev/" class="social-card instagram" target="_blank"
+      style="animation-delay: 0.5s;">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram {Dev}</span>
+    </a>
+
+    <!-- Card: Linktree Central -->
+    <a href="https://linktr.ee/devaks" class="social-card linktree" target="_blank"
+      style="animation-delay: 0.65s;">
+      <i class="fas fa-tree"></i>
+      <span>Linktree Central</span>
+    </a>
+
+    <!-- Card: Email Profissional -->
+    <a href="mailto:devaks@outlook.com" class="social-card email" target="_blank" style="animation-delay: 0.8s;">
+      <i class="fas fa-envelope"></i>
+      <span>Email Profissional</span>
+    </a>
+
+    <!-- Card: Skill Map – CSS e JS separados para facilitar a manutenção -->
+    <a href="#" class="social-card skill-map" onclick="openSkillMapModal()" style="animation-delay: 0.95s;">
+      <i class="fas fa-map"></i>
+      <span>Skill Map</span>
+    </a>
+
+    <a href="https://recnexus.com.br" class="social-card recnexus" target="_blank" style="animation-delay: 0.95s;">
+      <i class="fas fa-users"></i>
+      <span>Comunidade Tech</span>
+    </a>
+  </div>
+
+    <!-- MODAL PARA O SKILL MAP -->
+    <div class="skill-modal" id="skillModal">
+      <div class="skill-modal-content">
+        <button class="close-modal" onclick="closeSkillMapModal()">&times;</button>
+
+        <div class="image-container">
+          <img src="imgs/SkillMap-Ana-Karla.png" alt="Skill Map" id="skillMapImage">
+
+          <div class="download-info">
+            <p class="download-text">
+              Baixe o Skill Map e acesse meus projetos clicando nos cards das hard-skills
+            </p>
+
+            <div class="modal-actions">
+              <a href="pdfs/SkillMap-Ana-Karla.pdf" download="SkillMap-Ana-Karla.pdf" class="download-btn">
+                <i class="fas fa-file-pdf"></i> Baixar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- MODAL PARA FOTO AMPLIADA -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <img src="imgs/ana2.jpeg" alt="Foto Ampliada" id="modalImg">
+      <div class="close-btn" id="closeModal">&times;</div>
+    </div>
+  </div>
+
+  <!-- Footer Minimalista -->
+  <footer class="footer">
+    <p>© 2025 | Desenvolvido por Ana Karla</p>
+  </footer>
+
+  <!-- Scripts -->
+   <script src="js/SkillModal.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
